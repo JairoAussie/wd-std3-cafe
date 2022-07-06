@@ -1,4 +1,5 @@
 from os import system
+
 #create a Menu object and seed it
 
 def print_options():
@@ -16,7 +17,7 @@ def add_product():
 
     name = input("What's the name of the new product? ")
     price = float(input (f"What's the price of {name}? "))
-
+    
     #add menu item to the menu
 
 
