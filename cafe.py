@@ -15,7 +15,7 @@ def print_options():
 def add_product():
 
     name = input("What's the name of the new product? ")
-    price = ("What's the price of #{name}? ")
+    price = float(input (f"What's the price of {name}? "))
 
     #add menu item to the menu
 
