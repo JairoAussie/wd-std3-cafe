@@ -1,4 +1,5 @@
 from os import system
+from order import Order
 from seed import seed
 #create a Menu object and seed it
 menu = seed()
@@ -42,7 +43,18 @@ def edit_product():
 
 def take_order():
     print("start a new order...")
-    #create a new order
+    new_order = Order()
+    cont = "y"
+    #start adding items to the order, ask if there are more items each time after
+    while cont == "y":
+        name = input("What do you want have? ")
+        quantity = int(input("How many of them? "))
+        new_order.add_order_line(name, quantity)
+        cont = input("Do you want to order something else? (y/n) ")
+
+    print(new_order.order_items)
+    print(f"This is your bill: ${new_order.total_order(menu)}")
+    #when all the items are added show the total price of the order.
     #start adding items to the order, ask if there are more items each time after
     #when all the items are added show the total price of the order.
 
