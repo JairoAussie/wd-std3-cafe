@@ -14,6 +14,16 @@ class Menu:
         menu_item = MenuItem(name, price)
         self.menu_items.append(menu_item)
 
+    def find_item(self, name):
+        # return any(item for item in self.menu_items if item.name == name)
+        for item in self.menu_items:
+            if item.name == name:
+                return item
+        return False
+    
+    def delete_item(self,item):
+        self.menu_items.remove(item)
+
 item1 = MenuItem("Latte", 4.5)
 item2 = MenuItem("Capuccino", 4.5)
 item3 = MenuItem("Espresso", 3.5)
@@ -29,15 +39,11 @@ coder_menu.show_menu()
 
 coder_menu.add_item("Muffin", 6.0)
 coder_menu.show_menu()
+print(coder_menu.find_item("Latte"))
+print(coder_menu.find_item("Coffee"))
 
 
 
-#     #add item
-#     def add_item(name, price)
-#         menu_item = MenuItem.new(name, price)
-#         #@menu_items.push(menu_item)
-#         @menu_items << menu_item
-#     end
 
 #     #find item, it receives a name, it returns the index if the item was found, -1 if not found
 #     def find_item(name)
