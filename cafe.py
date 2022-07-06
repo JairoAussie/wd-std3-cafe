@@ -27,23 +27,18 @@ def delete_product():
         print(item.name)
     #ask about the product we want to delete
     name = input("What is the product you want to delete? ")
-    item = menu.find_item(name)
-    if item:
-        print(f"deleting {name}...")
-        menu.delete_item(item)
-    else:
-        print("The item is not in the list")
+    menu.delete_item(name)
     #make sure it is in the menu
 
     #delete it
 
 def edit_product():
-
+    #show the list of products, just names
+    for item in menu.menu_items:
+        print(item.name)
     #ask about the product we want to delete
     name = input("What is the product you want to edit? ")
-    #make sure it is in the menu
-
-    #ask for the new price
+    menu.update_item(name)
 
 def take_order():
     print("start a new order...")

@@ -14,15 +14,27 @@ class Menu:
         menu_item = MenuItem(name, price)
         self.menu_items.append(menu_item)
 
-    def find_item(self, name):
-        # return any(item for item in self.menu_items if item.name == name)
+    # def find_item(self, name):
+    #     # return any(item for item in self.menu_items if item.name == name)
+    #     for item in self.menu_items:
+    #         if item.name == name:
+    #             return item
+    #     return False
+    
+    def delete_item(self,name):
         for item in self.menu_items:
             if item.name == name:
-                return item
-        return False
-    
-    def delete_item(self,item):
-        self.menu_items.remove(item)
+                self.menu_items.remove(item)
+                return print(f"{name} removed from the menu")
+        return print(f"{name} is not on the menu")
+
+    def update_item(self,name):
+        for item in self.menu_items:
+            if item.name == name:
+                price = input(f"What is the new price for {name}? ")
+                item.price = price
+                return print(f"{name} price updated")
+        return print(f"{name} is not on the menu")
 
 item1 = MenuItem("Latte", 4.5)
 item2 = MenuItem("Capuccino", 4.5)
