@@ -5,7 +5,7 @@ def print_options():
     print("1. Show menu")
     print("2. Add product to the menu")
     print("3. Edit price of a product from the menu")
-    print( "4. Delete a product from the menu")
+    print("4. Delete a product from the menu")
     print("5. Take an order")
     print("6. Exit")
     opt = input("Select your option (1-6): ")
@@ -16,7 +16,7 @@ def add_product():
 
     name = input("What's the name of the new product? ")
     price = float(input (f"What's the price of {name}? "))
-
+    
     #add menu item to the menu
 
 
