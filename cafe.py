@@ -1,5 +1,7 @@
 from os import system
-#create a Menu object and seed it
+from seed import seed
+
+menu = seed()
 
 def print_options():
     print("1. Show menu")
@@ -48,9 +50,9 @@ option = ""
 while option != "6":
     system('clear')
     option = print_options()
-
+    system('clear')
     if option == "1":
-        print("print_menu")
+        menu.print_menu()
     elif option == "2":
         add_product()
     elif option == "3":
