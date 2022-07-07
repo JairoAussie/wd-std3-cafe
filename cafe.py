@@ -35,11 +35,11 @@ def delete_product():
     #delete it
 
 def edit_product():
-
+    menu.print_menu()
     #ask about the product we want to delete
     name = input("What is the product you want to edit? ")
     #make sure it is in the menu
-
+    menu.update_price(name)
     #ask for the new price
 
 def take_order():

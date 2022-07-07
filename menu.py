@@ -26,6 +26,18 @@ class Menu:
     
         return  print(f"{name} is not in the menu")   
 
+    def update_price(self, name):
+        # iterate through the list looking for the item
+        for item in self.menu_items:
+            # check if the item's name of this iteration is equal to the name we receive.
+            if item.name == name:
+                # ask for the new price
+                price = float(input(f"What is the new price for {name}? "))
+                #update the item's price
+                item.price = price
+                return print(f"{name}'s price was uptaded in the menu")
+    
+        return  print(f"{name} is not in the menu")   
 
 # coffee1 = MenuItem("Latte", 4.5)
 # coffee2 = MenuItem("Capuccino", 5.5)
