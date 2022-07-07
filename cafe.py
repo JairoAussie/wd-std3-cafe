@@ -18,7 +18,8 @@ def add_product():
 
     name = input("What's the name of the new product? ")
     price = float(input (f"What's the price of {name}? "))
-    
+    menu.add_item(name, price)
+    print(f"{name} being added to the menu...")
     #add menu item to the menu
 
 

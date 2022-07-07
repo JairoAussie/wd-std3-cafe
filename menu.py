@@ -9,8 +9,13 @@ class Menu:
         print("Welcome to Coder Cafe, this is our menu:")
         for item in self.menu_items:
             item.show_item()
+    # adds a new item to the menu
+    def add_item(self, name, price):
+        #self.menu_items.append(MenuItem(name, price))
+        new_item = MenuItem(name, price)
+        self.menu_items.append(new_item)
 
-    
+
 # coffee1 = MenuItem("Latte", 4.5)
 # coffee2 = MenuItem("Capuccino", 5.5)
 # coffee3 = MenuItem("Espresso", 3.5)
