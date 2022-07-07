@@ -25,9 +25,11 @@ def add_product():
 
 def delete_product():
     #show the list of products, just names
-
+    for item in menu.menu_items:
+        print(item.name)
     #ask about the product we want to delete
     name = input("What is the product you want to delete? ")
+    menu.delete_item(name)
     #make sure it is in the menu
 
     #delete it

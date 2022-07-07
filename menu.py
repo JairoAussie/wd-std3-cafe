@@ -15,6 +15,17 @@ class Menu:
         new_item = MenuItem(name, price)
         self.menu_items.append(new_item)
 
+    def delete_item(self, name):
+        # iterate through the list looking for the item
+        for item in self.menu_items:
+            # check if the item's name of this iteration is equal to the name we receive.
+            if item.name == name:
+                # access to the list and remove the item
+                self.menu_items.remove(item)
+                return print(f"{name} was removed from the menu")
+    
+        return  print(f"{name} is not in the menu")   
+
 
 # coffee1 = MenuItem("Latte", 4.5)
 # coffee2 = MenuItem("Capuccino", 5.5)
